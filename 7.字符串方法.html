@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>字符串方法</title>
+	</head>
+	<body>
+		<p>length 返回字符串的长度</p>
+		<p>indexof(str,index) 查找某个字符在字符串中的位置</p>
+		<p>
+			substring(index1,index2) 返回位于指定索引index1 和index2
+			之间的字符串 并且包含索引index1对应之间的字符 不包含索引index2
+			对应的字符
+		</p>
+		<p>split() 将字符串分割为字符串数组</p>
+		<p>Number() 将字符串转换为数字</p>
+		<script>
+			var t = 'hellow word1'
+			console.log(t.length)
+			var t2 = 'hellow word2'
+			// indexof(str,index)  查找某个指定字符在字符串中的位置
+			console.log(t2.indexOf('w', 1)) //5
+			// substring(index1,index2)  返回位于指定索引index1 和index2 之间的字符串
+			// 并且包含索引index1对应之间的字符 不包含索引index2 对应的字符
+			console.log(t2.substring(0, 6)) //hellow
+			// split(',')
+			console.log(t2.split()) //["hellow word2"]
+			console.log(t2.split('')) //["h", "e", "l", "l", "o", "w", " ", "w", "o", "r", "d", "2"]
+			var t3 = 'hellow word3,hellow word4'
+			console.log(t3.split(',')) //["hellow word3", "hellow word4"]
+			var t4 = '10'
+			console.log(t4) //字符串10
+			console.log(Number(t4)) // 数字10
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>强制类型转换</title>
+</head>
+
+<body>
+    <script>
+        // 将其他类型转换为String
+        // 方法一  toString()  仅限于number Boolean 
+        // 该方法不会影响原变量 它会将转换的结果返回
+        var a = 123;
+        a = a.toString();  //转换为字符串类型   注意 null undeified没有toString方法
+        console.log(a);
+        // 方法二  调用 String()函数  并将被转换的数据作为参数传递给函数
+        var b = undefined
+        b = String(b)
+        console.log(b);
+
+        // 将其他类型转换为number 
+        var c = '123'
+        // 方法一  使用 number 方法
+        // 注意 字符串转换为数字 如果是纯数字的字符串 直接转换为数字 
+        // 如果字符串中有其他非数字的内容 则转换为NaN  
+        // 如果字符串内容为空 或则全是空格 则转换为 0 
+        //  null   --> 0
+        // undefined  --> NaN 
+        c = Number(c)
+        console.log(c);
+
+        var d = ''
+        d = Number(d);
+        console.log(d);  // 0 
+
+        var e = true
+        e = Number(e)
+        console.log(e);   // true  1  false 0 
+
+        // 转换方式二 专门用来对付字符串
+        // parseInt()  把一个字符串转换为一个整数  可以将一个字符串中的有效的整数内容取出来
+        // parseFloat() 把一个字符串转换为一个浮点数 
+        var f = '123px'
+        f=parseInt(f)
+        console.log(f);  //123
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

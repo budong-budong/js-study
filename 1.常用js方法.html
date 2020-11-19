@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>js常用方法</h2>
+    <script>
+        // 1.三元运算符
+        // var  something = true
+        // if(something){
+        //     handletrue
+        // }else{
+        //     handlefalse
+        // }
+        // 简化写法
+        // var something = true
+        // something ? handletrue : handlefalse
+
+        // 2.短路或运算
+        // const defaultValue = "SomeDefaultValue"
+        // let someValueNotSureOfItsExistance = null
+        // let expectingSomeValue = someValueNotSureOfItsExistance || defaultValue
+        // console.log(expectingSomeValue) // SomeDefaultValue
+
+        // 3.条件成立
+        // var something = true
+        // if(something){
+        //     console.log('条件成立');  //条件成立
+        // }
+
+        // 4.for循环
+        // for(var i = 0; i<100;i++){
+        //     console.log(i);  //0-99
+        // }
+        // // 实现1-100累加
+        // var sum = 0;
+        // for(var i = 0;i<100;i++){
+        //     sum +=i;            
+        // }
+        // console.log(sum);  //4950
+
+        // let someValues = [1, 2, 4]
+        // for (let val in someValues) {
+        //     console.log(val)  //0 1 2 
+        // }
+        // let obj = {
+        //     'key1': 'value1',
+        //     'key2': 'value2',
+        //     'key3': 'value3'
+        // }
+        // for (let key in obj) {
+        //     console.log(key) //key1 key2 key3
+        // }
+
+        // 5.值到对象的映射
+        let  x='x',y='y';
+        let obj={x,y}
+        console.log(obj);  //{x: "x", y: "y"}
+
+
+
+
+    </script>
+</body>
+
+</html>

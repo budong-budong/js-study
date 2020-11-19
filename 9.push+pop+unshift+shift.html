@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push+pop</title>
+</head>
+
+<body>
+    <h3>push</h3>
+    <h5>该方法可以向数组末尾添加一个或多个元素，并返回数组新的长度</h5>
+    <h5>可以将要添加的元素作为方法的参数传递 这样这些元素将会自动添加到数组的末尾</h5>
+    <h3>pop</h3>
+    <h5>该方法将直接删除数组中的最后一位,并将删除的元素作为返回值返回</h5>
+    <h3>unshift</h3>
+    <h5>该方法可以向数组前端添加一个或多个元素，并返回数组新的长度</h5>
+    <h3>shift</h3>
+    <h5>该方法将直接删除数组中的第一位,并将删除的元素作为返回值返回</h5>
+    <script>
+        var arr = ['小花', '小明', '小刘']
+        arr.push('小赵')
+        console.log(arr);  // ["小花", "小明", "小刘", "小赵"]
+
+        var arr1 = ["小花", "小明", "小刘", "小赵"]
+
+        arr1.pop();
+        console.log(arr1);  //["小花", "小明", "小刘"]
+
+        var arr2 = ['张三','李四','王五']
+        arr2.unshift('小红','小明')
+        console.log(arr2);  //["小红", "小明", "张三", "李四", "王五"]
+
+        arr2.shift()
+        console.log(arr2);  //["小明", "张三", "李四", "王五"]
+
+    </script>
+</body>
+
+</html>
