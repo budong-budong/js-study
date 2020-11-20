@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>continue  当条件成立时跳出仍继续</h3>
+    <p id="demo"></p>
+    <script>
+        var text = ''
+        var i;
+        for (i = 0; i < 15; i++) {
+            if (i % 3 === 0) {
+                continue
+            }
+            text += '数字是' + i + '<br>'
+        }
+        document.getElementById("demo").innerHTML = text
+//         数字是1 数字是2 数字是4 数字是5 ...
+
+
+
+
+    </script>
+</body>
+
+</html>

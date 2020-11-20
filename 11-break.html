@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>break 当条件成立时完全跳出不再执行</h3>
+    <p id="demo"></p>
+    <script>
+        var text = '';
+        var i;
+        for (i = 0; i < 10; i++) {
+            if (i === 3) {
+                break
+            }
+            text += '数字是' + i + '<br>'
+        }
+        document.getElementById("demo").innerHTML = text  //  数字是0 数字是1 数字是2
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>逻辑运算符</h3>
+    <p>&&  与  两者都为true时 结果才为true</p>
+    <p>|| 或  有一个为true 结果就是true</p>
+    <p>! 非</p>
+    <script>
+        let i= 10;
+        let x = 1;
+        if(i&&x >=5){
+            console.log('true');
+        }else{
+            console.log('false');
+        }
+        // 结果为false  
+        let y = 8;
+        let z= 12;
+        if(y||z >=10){
+            console.log('true');
+        }else{
+            console.log('false');
+        }
+        // 结果为true
+
+        let j = 5;
+        let k = 6;
+        if(!j==k){
+            console.log('true');
+        }else{
+            console.log('false');
+        }
+         // 结果为false  
+    </script>
+</body>
+</html>

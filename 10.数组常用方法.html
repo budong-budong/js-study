@@ -9,7 +9,11 @@
 		<p>length 数组的长度</p>
 		<p>join(',') 将数组转换为字符串并用逗号隔开</p>
 		<p>sort() 对数组进行排序</p>
-		<p>push() 向数组末尾添加元素并返回新的长度</p>
+        <p>push() 向数组末尾添加元素并返回新的长度</p>
+        <p>for  遍历数组</p>
+        <p>forEach()  遍历数组</p>
+        <p id="demo"></p>
+        <p id='demo1'></p>
 		<script>
 			// 1.创建数组的方法
 			var arr = new Array('apple', 'vivo', '华为', '小米', '荣耀', 'oppo')
@@ -19,7 +23,24 @@
 			var arr1 = new Array('1', '2', '3', '5', '6', '11', '12', '22')
 			console.log(arr1.sort()) // ["1", "11", "12", "2", "22", "3", "5", "6"]
 			console.log(arr1.push('push')) //9
-			console.log(arr1) //["1", "11", "12", "2", "22", "3", "5", "6", "push"]
+            console.log(arr1) //["1", "11", "12", "2", "22", "3", "5", "6", "push"]
+            
+            let arr2 = ['apple', 'vivo', '华为', '小米', '荣耀', 'oppo']
+            let text = '<ul>'
+            for(let  i = 0 ; i<arr2.length;i++){
+                text +='<li>' + arr[i] + '</li>'
+            }
+            document.getElementById('demo').innerHTML = text
+            //结果 在页面中 循环生成了一个 ul li 列表 
+
+            
+            let text1 ='<ol>'
+            function myfunction(value){
+                text1 +='<li>' + value + '</li>'
+            }
+            arr2.forEach(myfunction)
+            document.getElementById('demo1').innerHTML = text1
+             //结果 在页面中 循环生成了一个 ol li 列表 
 		</script>
 	</body>
 </html>
