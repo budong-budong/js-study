@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>循环</title>
+</head>
+
+<body>
+  <p>for循环</p>
+  <p>for/in 遍历对象</p>
+  <p>while 当指定条件为true时循环一段代码块</p>
+  <p>do/while 当指定条件为true时循环一段代码块</p>
+  <p>do/while 循环是while循环的变体 在检查条件是否为真之前，这种循环会先执行一次代码，然后只要条件为真就会一直执行</p>
+  <script>
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+    let person = { name: 'xiaohua', age: 18, name1: 'xiaomming', age1: '20' }
+    let text = '';
+    let x;
+    for (x in person) {
+      text += person[x] + ''
+    }
+    console.log(text);  //xiaohua18xiaomming20
+    let text1;
+    let i1 = 0;
+    while (i1 < 10) {
+      text1 += '数字是' + i1;
+      i1++;
+    }
+    console.log(text1);  //undefined数字是0数字是1数字是2数字是3数字是4数字是5数字是6数字是7数字是8数字是9
+
+
+  </script>
+</body>
+
+</html>

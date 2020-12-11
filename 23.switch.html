@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p>switch语句用于基于不同条件执行不同动作</p>
+    <p>break 当条件成立时会跳出switch语句</p>
+    <p>default 关键词规定不存在case匹配时所运行的代码</p>
+
+    <script>
+        var day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = '周日'
+                break
+            case 1:
+                day = '周一'
+                break
+            case 2:
+                day = '周二'
+                break
+            case 3:
+                day = '周三'
+                break
+            case 4:
+                day = '周四'
+                break
+            case 5:
+                day = '周五'
+                break
+            case 6:
+                day = '周六'
+        }
+        document.getElementById('demo').innerHTML = '今天是' + day
+    </script>
+</body>
+
+</html>

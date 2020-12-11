@@ -10,8 +10,23 @@
 		<p>join(',') 将数组转换为字符串并用逗号隔开</p>
 		<p>sort() 对数组进行排序</p>
         <p>push() 向数组末尾添加元素并返回新的长度</p>
+        <p>shift() ==>删除数组首个元素</p>
+        <p>unshift() ==>删除数组最后一个元素</p>
         <p>for  遍历数组</p>
         <p>forEach()  遍历数组</p>
+        <p>splice() ==>第一个参数定义了应添加新元素的位置，第二个参数表示应删除多少个元素，其余参数则是要添加的元素</p>
+        <p>concat() ==>合并数组</p>
+        <p>slice() ==>切割数组  slice(2)表示删除数组里的两个参数</p>
+        <p>sort() ==>以字母顺序对数组进行排序</p>
+        <p>reverse() ==>反转数组</p>
+        <p>map ==>通过对每个数组元素指行函数来创造新数组，不会对没有值的数组元素执行函数，不会改变原数组</p>
+        <p>filter ==>创建一个包通过测试的数组元素的新数组  类似于数组过滤</p>
+        <p>reduce 在每个数组元素上运行函数，以生成(减少)单个值，该方法在数组中从左到右工作，不会减少原数组 常用于购物车结算</p>
+        <p>every ==>检查所有数组值是否通过测试  当所有条件都成立返回true 否则返回false</p>
+        <p>some ==>检查某些值是否通过了测试  当有一个条件成立就返回true 所有条件都不成立则返回false</p>
+        <p>indexOf() ==>在数组中搜索元素并返回其位置</p>
+        <p>find  ==>返回通过测试的第一个数组元素的位置</p>
+        <p>findIndex() ==>返回通过测试函数的第一个数组元素的索引</p>
         <p id="demo"></p>
         <p id='demo1'></p>
 		<script>
@@ -33,7 +48,7 @@
             document.getElementById('demo').innerHTML = text
             //结果 在页面中 循环生成了一个 ul li 列表 
 
-            
+
             let text1 ='<ol>'
             function myfunction(value){
                 text1 +='<li>' + value + '</li>'
@@ -41,6 +56,63 @@
             arr2.forEach(myfunction)
             document.getElementById('demo1').innerHTML = text1
              //结果 在页面中 循环生成了一个 ol li 列表 
+
+             let con = ['小花','小明','小丽']
+             let con1 = ['小赵','小刘','小王']
+             let con2 = con.concat(con1)
+             console.log(con2);
+
+             let sl = ['小花','小明','小丽']
+             let sl1 = sl.slice(2)
+             console.log(sl1); // 小丽
+
+             let map1 = [1,2,3,4,''];
+             function myfunction1(value){
+                 return value * 2
+             }
+             let map2 = map1.map(myfunction1)
+             console.log(map2);  //2 4 6 8 0
+
+             let filter1 = [8,12,45,50,18,20]
+             function myfunction2(value){
+                 return value>18
+             }
+             let filter2 = filter1.filter(myfunction2)
+             console.log(filter2);  //45 50 20
+
+             let reduce1 = [81,12,4,9,16]
+             let reduce2 = reduce1.reduce(myfunction3)
+             function myfunction3(total,value){
+                 return total + value
+             }
+             console.log(reduce2); //122
+
+             let every1 = [1,12,5,20,18,56,2,46,3]
+             function myfunction4(value,index){
+                 return value>18
+             }
+             let every2 = every1.every(myfunction4)
+             console.log(every2); //false
+
+             let some1 = [45,7,8,12,3,46,89,50,4]
+             function myfunction5(value,index){
+                 return value>12
+             }
+             let some2 = some1.some(myfunction5)
+             console.log(some2);  //true  >100 false
+
+             let index1 = ['小花','小明','小丽','小米']
+             let index2 = index1.indexOf('小丽')
+             console.log(index2);  //2
+
+             let find1 =['12','15','16','18','20','52','46']
+             function myfunction6(value,index){
+                 return value>18
+             }
+             let find2 = find1.find(myfunction6)
+             let find3 = find1.findIndex(myfunction6)
+             console.log(find2); //20
+             console.log(find3); //4
 		</script>
 	</body>
 </html>
