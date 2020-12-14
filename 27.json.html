@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+
+<body>
+    <p>json是轻量级的数据交换格式</p>
+    <p>json的通常用法是从web服务器读取数据，然后再网页中显示数据</p>
+    <p id="demo"></p>
+    <script>
+        var text = '{ "employees" : [' +
+            '{ "firstName":"Bill" , "lastName":"Gates" },' +
+            '{ "firstName":"Steve" , "lastName":"Jobs" },' +
+            '{ "firstName":"Alan" , "lastName":"Turing" } ]}';
+        var obj = JSON.parse(text)
+        document.getElementById("demo").innerHTML = obj.employees[1].firstName + obj.employees[1].lastName
+    </script>
+</body>
+
+</html>
