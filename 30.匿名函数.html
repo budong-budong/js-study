@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名函数</title>
+</head>
+<body>
+    <p>匿名自调用函数（没有名称的函数和）</p>
+    <p id="demo"></p>
+    <script>
+        // 正常函数
+        function myfunction(a,b){
+            return a*b
+        }
+        console.log(this.myfunction(5,6));  //30
+        // 匿名函数
+        (function (){
+            document.getElementById("demo").innerHTML = "我是匿名函数，自己调用自己"
+        })();
+    </script>
+</body>
+</html>

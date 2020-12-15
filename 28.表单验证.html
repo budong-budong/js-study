@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单验证</title>
+</head>
+
+<body>
+    <form action="/1.常用js方法.html" name="myform" method="post" onsubmit="return validateForm()">
+        姓名：<input type="text" name="fname" required>
+        年龄：<input type="text" name="fage">
+        <input type="submit" value="提交">
+    </form>
+    <p>输入数字并点击提交：</p>
+    <input id="id1" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">提交</button>
+    <p>如果该数字小于 100 或大于 300，将显示错误消息。</p>
+    <p id="demo"></p>
+    <script>
+        function validateForm() {
+            var x = document.forms["myform"]["fname"].value;
+            var age = document.forms["myform"]["fage"].value;
+            if (x == "") {
+                alert('姓名必填');
+                return false;
+            }
+            if (age == "") {
+                alert('年龄必填');
+                return false;
+            } else if (age <= 0 || age >= 150) {
+                alert('请输入合法年龄');
+                return false;
+            }
+        }
+        function myFunction() {
+            var inpObj = document.getElementById("id1");
+            if (inpObj.checkValidity() == false) {
+                document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+    <p>es6新增属性 箭头函数</p>
+    <p>不需要再写function关键字，return关键字 和花括号</p>
+    <p>注意 箭头函数没有自己的this,他们不适合定义对象方法，箭头函数没有声明提升，他们必须在使用前进行定义。</p>
+    <script>
+        // 传统写法
+        var x = function(x,y){
+            return x*y
+        }
+        // es6写法
+        var x =(x,y) => x*y
+    </script>
+</body>
+</html>

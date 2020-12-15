@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom常用方法和属性</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <h1>为了提高页面性能优化 请尽量少的使用dom操作</h1>
+    <h2>查找 HTML 元素</h2>
+    <ul>
+        <li>document.getElementById(id) 通过id访问元素</li>
+        <li>document.getElementsByTagName(name) 通过标签名访问元素</li>
+        <li>document.getElementsByClassName(name) 通过标签名访问元素</li>
+    </ul>
+    <h2>改变 HTML 元素</h2>
+    <ul>
+        <li>element.innerHTML = new html content 用于获取或替换html元素的内容</li>
+        <li>element.attribute = new value 改变html元素的属性值 </li>
+        <li>element.setAttribute(attribute, value)  改变html元素的属性值</li>
+        <li>element.style.property = new style 改变 HTML 元素的样式</li>
+    </ul>
+    <h2>添加和删除元素</h2>
+    <ul>
+        <li>document.createElement(element) 创建html元素</li>
+        <li>document.removeChild(element) 删除</li>
+        <li>document.appendChild(element) 添加</li>
+        <li>document.replaceChild(element) 替换</li>
+        <li>document.write(text) 写入html输出流</li>
+    </ul>
+    <h2>添加事件处理程序</h2>
+    <p>document.getElementById(id).onclick = function(){code} </p>
+</body>
+</html>
