@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>let与const</title>
+</head>
+
+<body>
+  <h2>let声明的变量只在let命令所在代码块内有效</h2>
+  <ol>
+    <li>代码块内有效</li>
+    <li>不能重复声明</li>
+    <li>for循环内适合用let</li>
+    <li>不存在变量提升</li>
+  </ol>
+  <p>
+    变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i,
+    每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，
+    而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。
+  </p>
+  <p>
+    变量 j 是用 let 声明的，当前的 j 只在本轮循环中有效，
+    每次循环的 j 其实都是一个新的变量，所以 setTimeout 定时器里面的 j 其实是不同的变量，
+    即最后输出 12345。（若每次循环的变量 j 都是重新声明的，
+    如何知道前一个循环的值？这是因为 JavaScript 引擎内部会记住前一个循环的值）
+  </p>
+  <h2>const声明一个只读的常量，一旦声明，常量的值就不能改变</h2>
+  <script>
+    // 输出10个10
+    for (var i = 0; i < 10; i++) {
+      setTimeout(function () {
+        console.log(i)
+      }, 1000)
+    }
+    // 输出12345678910
+    for (let j = 0; j < 10; j++) {
+      setTimeout(function () {
+        console.log(j)
+      }, 1000)
+    }
+    //代码块内有效 不能重复声明
+    // {
+    //   let a = 0
+    //   var b = 1
+    //   let a = 2  //Identifier 'a' has already been declared
+    //   var b = 2
+    // }
+    // console.log(a)  //a is not defined
+    // console.log(b)
+
+    // console.log(c)  //Cannot access 'c' before initialization 初始化前无法访问“c”
+    // let c="3"
+    // console.log(d)
+    // var d= 4
+    const pi ="3.1415926"
+    //const age //Missing initializer in const declaration 常量声明中缺少初始值设定项
+    const age = 20
+  </script>
+</body>
+
+</html>
