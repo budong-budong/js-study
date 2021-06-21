@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js高阶学习</title>
+</head>
+
+<body>
+  <p>Switch 在进行比较时用的是全等 因此'10'和10是不等的</p>
+  <script>
+    let a = 6;
+    let b = 9;
+    function simpletag(strings, ...expressions) {
+      console.log(strings)
+      for (const expression of expressions) {
+        console.log(expression)
+      }
+      return 'footbar'
+    }
+    let taggedResult = simpletag`${a}+${b} = ${a + b}`
+    console.log(taggedResult)
+
+    // switch 的用法
+    let num = 30;
+    if (num == 20) {
+      console.log(num + '=' + '20')
+    } else if (num == 25) {
+      console.log(num + '=' + '25')
+    } else {
+      console.log(num + '=' + '30') //30=30
+    }
+
+    let num1 = 30;
+    switch (num1) {
+      case num1 = 20:
+        console.log(num1 + '=' + '20')
+        break;
+      case num1 = 25:
+        console.log(num1 + '=' + '25')
+        break;
+      case num1 = 30:
+        console.log(num1 + '=' + '30') //30=30
+        break;
+    }
+
+
+
+  </script>
+</body>
+
+</html>

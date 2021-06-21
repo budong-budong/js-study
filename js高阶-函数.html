@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>函数</title>
+</head>
+
+<body>
+  <h3>
+    任何函数，在任何时间都可以通过return返回函数的值，用法是后要跟返回的值（参考案例中的sum函数）
+    要注意，只要碰到return语句，函数会立即停止执行。写在return后的语句不会再执行。
+  </h3>
+  <script>
+    function sayhi(name, message) {
+      console.log('hellow' + name + ',' + message) //hellowxiaohua,今天天气好
+    }
+    sayhi('xiaohua', '今天天气好')
+    function sum(num1, num2) {
+      return num1 + num2
+      console.log('我是return后的语句')
+    }
+    let result = sum(1, 2)
+    console.log(result) //3
+  </script>
+</body>
+
+</html>

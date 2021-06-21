@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es6数组语法</title>
+</head>
+
+<body>
+  <h1>常用部分</h1>
+  <h3>push()</h3>
+  <p>该方法主要用在向数组末尾添加元素中</p>
+  <h3>concat()</h3>
+  <p>该方法主要用在合并两个数组或数组对象中</p>
+  <h3>splice(index,num)</h3>
+  <p>index,索引值,num个数 从第index开始,删除num个元素 </p>
+  <p style="color:red">会改变原数组</p>
+  <h3>slice(index,num)</h3>
+  <p>index,索引值,num个数 从第index开始,删除num个元素 </p>
+  <p style="color:red">不会改变原数组</p>
+
+
+  <h1>以下部分用的较少</h1>
+  <h3>pop()</h3>
+  <p>从数组后面删除元素,且只能删除一个</p>
+  <h3>shift()</h3>
+  <p>从数组前面删除元素,且只能删除一个</p>
+  <h3>unshift()</h3>
+  <p>从数组前面添加元素</p>
+  <h3>split()</h3>
+  <p>将字符串转换为数组 用的较少 不做总结</p>
+  <h3>sort()</h3>
+  <p>数组排序 用的较少 不做总结</p>
+  <h3>reverse()</h3>
+  <p>数组反转 用的较少 不做总结</p>
+  <script>
+    // push方法
+    let arr = [1, 2, 3, 4, 5]
+    console.log(arr.push(6, 7, 8))
+    console.log(arr)  //[1, 2, 3, 4, 5, 6, 7, 8]
+    // concat方法
+    let arr2 = [{
+      name: '小华',
+      age: 21,
+      sex: '女'
+    }, {
+      name: '小李',
+      age: 28,
+      sex: '男'
+    }, {
+      name: '小张',
+      age: 19,
+      sex: '男'
+    }]
+    let arr3 = [{
+      name: '新人小赵',
+      age: 21,
+      sex: '女'
+    }, {
+      name: '新人小刘',
+      age: 28,
+      sex: '男'
+    },]
+    let arr4 = arr2.concat(arr3)
+    console.log(arr4)
+
+    // pop
+    let arrPop = [1, 2, 3, 4, 5, 6, 7, 88]
+    console.log(arrPop.pop()) //88 删除的元素
+    console.log(arrPop) //[1, 2, 3, 4, 5, 6, 7] 删除后的数组
+
+    // shift
+    console.log(arrPop.shift()) //1 删除的元素
+    console.log(arrPop) //[2, 3, 4, 5, 6, 7]  删除后的数组
+
+    //unshift
+    console.log(arrPop.unshift(99, 98, 97))
+    console.log(arrPop) //[99, 98, 97, 2, 3, 4, 5, 6, 7]
+
+    // splice(index,num)
+    let arrSplice = [11, 22, 33, 44, 55, 66]
+    console.log(arrSplice.splice(1, 2)) //[22, 33]
+    console.log(arrSplice) //[11, 44, 55, 66]
+
+    let arrSlice = [11, 12, 13, 14, 15, 16]
+    console.log(arrSlice.slice(0, 1)) //[11]
+    console.log(arrSlice) //[11, 12, 13, 14, 15, 16]
+
+
+
+  </script>
+</body>
+
+</html>
