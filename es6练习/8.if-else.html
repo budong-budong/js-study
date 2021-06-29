@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>减少使用if else 和switch的用法</p>
+  <script>
+    function dosomething(arg1) {
+      arg1 = arg1 || 10
+      return arg1
+    }
+    let foo = 10
+    foo === 10 && dosomething()
+    console.log(foo) //10
+    let foo1 = 5
+    foo1 === 5 && dosomething()
+    console.log(foo1); //5
+
+
+  </script>
+</body>
+
+</html>

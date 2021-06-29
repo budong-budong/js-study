@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>闭包</title>
 </head>
+
 <body>
     <p>闭包 函数外部可以访问函数内部资源</p>
+    <p>函数柯里化</p>
+    <p>核心：思考如何缓存每一次传入的参数，传入的参数和目标参数作比较</p>
+    <script>
+        const curry = (fn) => {
+            let params = [];
+            const next = (...args) => {
+                params = [...params, ...args];
+                if (params.length < fn.length) {
+                    return next
+                } else {
+                    return fn.apply(fn, params)
+                }
+            }
+            return next
+        }
+
+        const sum = (a, b, c, d, j) => {
+            return a + b + c + d + j
+        }
+        const fn = curry(sum)
+        const res = fn(1)(2)(3)(4)(5) //两种写法获取到的结果是一样的
+        const res2 = fn(1, 2, 3, 4, 5)
+        console.log(res, 'res')
+        console.log(res2);
+    </script>
 </body>
+
 </html>

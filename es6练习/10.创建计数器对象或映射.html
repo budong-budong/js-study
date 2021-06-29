@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>创建计数器对象或映射</p>
+  <script>
+    let string = 'hahahdlssowsn'
+    const table = {}
+    for (let char of string) {
+      table[char] = table[char] + 1 || 1
+    }
+    console.log(table); //{a: 2 d: 1 h: 3 l: 1 n: 1 o: 1 s: 3 w: 1}
+  </script>
+</body>
+
+</html>
